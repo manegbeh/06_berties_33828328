@@ -8,11 +8,11 @@
     <div class="index-container">
       <h1>Bargain Books</h1>
       <h2>All books less than £20!</h2>
-      <ul>
+      <div class="list-grid">
         <% availableBooks.forEach(item => { %>
-          <li><%= item.name %>, £<%= item.price %></li>
+          <div class="list-item"><%= item.name %> — £<%= item.price %></div>
         <% }) %>
-      </ul>
+      </div>
     </div>
   </body>
 </html>

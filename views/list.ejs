@@ -7,11 +7,11 @@
   <body class="homepage">
     <div class="index-container">
       <h1>Books We Sell</h1>
-      <ul>
+      <div class="list-grid">
         <% availableBooks.forEach(item => { %>
-          <li><%= item.name %>, £<%= item.price %></li>
-        <% }) %>    
-      </ul>
+          <div class="list-item"><%= item.name %> — £<%= item.price %></div>
+        <% }) %>
+      </div>
     </div>
   </body>
 </html>
