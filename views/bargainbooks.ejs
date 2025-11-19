@@ -4,13 +4,15 @@
     <title><%=shopData.shopName%></title>
     <link rel="stylesheet"  type="text/css" href="/main.css" />
   </head>
-  <body>
-    <h1>Bargain Books:</h1>
-    <h4>All books less than £20!</h4>
-    <ul>
+  <body class="homepage">
+    <div class="index-container">
+      <h1>Bargain Books</h1>
+      <h2>All books less than £20!</h2>
+      <ul>
         <% availableBooks.forEach(item => { %>
-            <li><%= item.name %>, £<%= item.price%></li>
-        <% }) %>  
-    </ul>
+          <li><%= item.name %>, £<%= item.price %></li>
+        <% }) %>
+      </ul>
+    </div>
   </body>
 </html>
