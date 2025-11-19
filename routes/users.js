@@ -1,7 +1,7 @@
 // Create a new router
 const express = require("express")
 const router = express.Router()
-const bcrypt = require('bcryptjs')
+const bcrypt = require('bcrypt')
 const db = global.db
 const saltRounds = 10
 
