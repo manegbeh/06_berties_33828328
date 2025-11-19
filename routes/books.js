@@ -15,7 +15,7 @@ router.get('/search_result', function (req, res, next) {
         if (err) {
             next(err)
         }
-        res.render("searchresult.ejs", {availableBooks: result})
+        res.render("search_result.ejs", {availableBooks: result})
     });
 });
 
