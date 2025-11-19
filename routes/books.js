@@ -6,7 +6,7 @@ router.get('/search',function(req, res, next){
     res.render("search.ejs")
 });
 
-router.get('/search-result', function (req, res, next) {
+router.get('/search_result', function (req, res, next) {
      //searching in the database
     let sqlquery = "SELECT * FROM books WHERE name LIKE '%" + req.query.search_text + "%'"; // query database to get all books with name that contains the keyword using "like"
     console.log(sqlquery)
