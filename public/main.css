@@ -7,7 +7,7 @@ body {
 }
 
 /* Center the login box */
-.container {
+.container, .index-container{
     max-width: 420px;
     margin: 60px auto;
     background: #ffffff;
