@@ -36,5 +36,44 @@ router.post('/registered', function (req, res, next) {
     })
 })
 
+router.get('/list', function (req, res, next) {
+    const sqlquery = "SELECT username, first, last, email FROM users"
+    db.query(sqlquery, (err, result) => {
+        if (err) return next(err)
+        res.render("users/list", { users: result })
+    })
+})
+
+router.get('/login', function (req, res) {
+    res.render('users/login')
+})
+
+router.post('/loggedin', function (req, res, next) {
+
+    const username = req.body.username
+    const password = req.body.password
+
+    const sqlquery = "SELECT * FROM users WHERE username = ?"
+    db.query(sqlquery, [username], (err, result) => {
+        if (err) return next(err)
+
+        if (result.length === 0) {
+            return res.send("Login failed: Username does not exist.")
+        }
+
+        const hashedPassword = result[0].hashedPassword
+
+        bcrypt.compare(password, hashedPassword, function (err, match) {
+            if (err) return next(err)
+
+            if (match === true) {
+                res.send(`Login successful! Welcome back, ${username}.`)
+            } else {
+                res.send("Login failed: Incorrect password.")
+            }
+        })
+    })
+})
+
 // Export the router object so index.js can access it
 module.exports = router
