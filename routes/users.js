@@ -1,11 +1,12 @@
 // Create a new router
 const express = require("express")
-const bcrypt = require('bcrypt')
-const saltRounds = 10
 const router = express.Router()
+const bcrypt = require('bcryptjs')
+const db = global.db
+const saltRounds = 10
 
-router.get('/register', function (req, res, next) {
-    res.render('register.ejs')
+router.get('/register', function (req, res) {
+    res.render('register', { shopData: req.app.locals.shopData })
 })
 
 router.post('/registered', function (req, res, next) {
@@ -36,6 +37,7 @@ router.post('/registered', function (req, res, next) {
     })
 })
 
+// List users (NO passwords shown)
 router.get('/list', function (req, res, next) {
     const sqlquery = "SELECT username, first, last, email FROM users"
     db.query(sqlquery, (err, result) => {
@@ -75,5 +77,4 @@ router.post('/loggedin', function (req, res, next) {
     })
 })
 
-// Export the router object so index.js can access it
 module.exports = router
