@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const ejs = require("ejs");
 const path = require("path");
@@ -7,7 +9,7 @@ const expressSanitizer = require("express-sanitizer");
 
 // Create the express application object
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 
 // Define the database connection pool
 const db = mysql.createPool({
@@ -47,20 +49,11 @@ app.use(express.static(path.join(__dirname, "public")));
 // App-specific data
 app.locals.shopData = { shopName: "Bertie's Books" };
 
-// Load the route handlers
-const mainRoutes = require("./routes/main")
-app.use('/', mainRoutes)
-
-// Load the route handlers for /users
-const usersRoutes = require('./routes/users')
-app.use('/users', usersRoutes)
-
-// Load the route handlers for /books
-const booksRoutes = require('./routes/books')
-app.use('/books', booksRoutes)
-
-// Start the web app listening
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+// Routes
+app.use("/", require("./routes/main"));
+app.use("/users", require("./routes/users"));
+app.use("/books", require("./routes/books"));
+app.use("/audit", require("./routes/audit"));
 
 // Start server
 app.listen(port, () =>
