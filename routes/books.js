@@ -6,7 +6,7 @@ router.get('/search',function(req, res, next){
     res.render("search.ejs")
 });
 
-router.get('/search_result', function (req, res, next) {
+router.get('/books/search_result', function (req, res, next) {
      //searching in the database
     let sqlquery = "SELECT * FROM books WHERE name LIKE '%" + req.query.search_text + "%'"; // query database to get all books with name that contains the keyword using "like"
     console.log(sqlquery)
@@ -19,7 +19,7 @@ router.get('/search_result', function (req, res, next) {
     });
 });
 
-router.get('/list', function(req, res, next) {
+router.get('/books/list', function(req, res, next) {
     let sqlquery = "SELECT * FROM books"; // query database to get all the books
     // execute sql query
     db.query(sqlquery, (err, result) => {
@@ -30,7 +30,7 @@ router.get('/list', function(req, res, next) {
     });
 });
 
-router.get('/addbook',function(req, res, next){
+router.get('/books/addbook',function(req, res, next){
     res.render('addbook.ejs')
 });
 
@@ -48,7 +48,7 @@ router.post('/bookadded', function (req, res, next) {
     })
 }) 
 
-router.get('/bargainbooks',function(req, res, next){
+router.get('/books/bargainbooks',function(req, res, next){
     // Query the database to get books priced lessed than 20
      let sqlquery = "SELECT * FROM books WHERE price < 20";
     // execute sql query
