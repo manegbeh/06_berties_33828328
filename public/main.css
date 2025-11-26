@@ -156,8 +156,8 @@ button:hover, .btn-primary:hover {
   align-items: center;
   gap: 25px;
   min-width: 0;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 0;
+  margin-right: 0;
   padding: 0;
 }
 
