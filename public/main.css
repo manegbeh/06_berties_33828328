@@ -123,15 +123,18 @@ button:hover, .btn-primary:hover {
 .footer-text a:hover {
     text-decoration: underline;
 }
-/* NAVBAR STYLING */
+
+/* ======== NAVBAR STRUCTURE ======== */
 .navbar {
   width: 100%;
   background: #1f1f1f;
   color: white;
   padding: 15px 40px;
+  
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Left | Center | Right */
   align-items: center;
+
   font-family: Arial, sans-serif;
   position: fixed;
   top: 0;
@@ -139,31 +142,51 @@ button:hover, .btn-primary:hover {
   z-index: 1000;
 }
 
-.nav-logo {
+/* Left side logo */
+.nav-left .nav-logo {
   font-size: 22px;
   font-weight: bold;
+  color: white;
+  text-decoration: none;
 }
 
-.nav-links {
+/* Center nav links (even spacing) */
+.nav-center {
+  flex: 1;                     /* Pushes left + right apart */
   list-style: none;
   display: flex;
-  gap: 25px;
+  justify-content: center;     /* Center the group */
+  gap: 40px;                   /* Even spacing between links */
   margin: 0;
   padding: 0;
 }
 
-.nav-links a {
+.nav-center a {
   color: white;
   text-decoration: none;
   font-size: 16px;
+}
+
+.nav-center a:hover {
+  color: #a460ff;
+}
+
+/* Right login button (inverted colours) */
+.login-btn {
+  padding: 8px 16px;
+  background: white;
+  color: #1f1f1f;              /* Inverted colours */
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
   transition: 0.2s;
 }
 
-.nav-links a:hover {
-  color: #a460ff; /* purple highlight like your example */
+.login-btn:hover {
+  background: #a460ff;
+  color: white;
 }
 
-/* Push page content down below nav */
 .index-container {
   margin-top: 120px;
   text-align: center;

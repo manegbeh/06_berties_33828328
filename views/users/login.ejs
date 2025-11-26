@@ -7,18 +7,20 @@
 <body>
     <h1>Bertie’s Books</h1>   
     <nav class="navbar">
-      <div class="nav-logo"><%= shopData.shopName %></div>
+      <div class="nav-left">
+        <a href="/" class="nav-logo"><%= shopData.shopName %></a>
+      </div>
 
-      <ul class="nav-links">
-        <li><a href="../">Home</a></li>
+      <ul class="nav-center">
         <li><a href="../books/list">All Books</a></li>
         <li><a href="../books/add">Add Book</a></li>
         <li><a href="../books/search">Search Books</a></li>
         <li><a href="./register">Register</a></li>
-        <li><a href="./login">Login</a></li>
         <li><a href="../about">About</a></li>
-        <li><a href="../logout">Logout</a></li>
       </ul>
+      <div>
+        <a href="./login" class="login-btn"></a>
+      </div>
     </nav>
   <div class="container">
 
