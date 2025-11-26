@@ -123,3 +123,48 @@ button:hover, .btn-primary:hover {
 .footer-text a:hover {
     text-decoration: underline;
 }
+/* NAVBAR STYLING */
+.navbar {
+  width: 100%;
+  background: #1f1f1f;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav-logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  color: #a460ff; /* purple highlight like your example */
+}
+
+/* Push page content down below nav */
+.index-container {
+  margin-top: 120px;
+  text-align: center;
+}
