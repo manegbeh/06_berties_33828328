@@ -5,17 +5,26 @@
     <link rel="stylesheet"  type="text/css" href="/main.css" />
   </head>
   <body class="homepage">
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="/" class="nav-logo"><%= shopData.shopName %></a>
+      </div>
+
+      <ul class="nav-center">
+        <li><a href="/books/list">All Books</a></li>
+        <li><a href="/books/add">Add Book</a></li>
+        <li><a href="/books/search">Search Books</a></li>
+        <li><a href="/users/register">Register</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+
+      <div>
+        <a href="/users/login" class="login-btn">Login</a>
+      </div>
+    </nav>
     <div class="index-container">
       <h1>About <%= shopData.shopName %></h1>
       <p>We sell all sorts of books and nothing else!</p>
-      <p><a href="./">Home</a></p>
-      <p><a href="./books/list">All Books</a></p>
-      <p><a href="./books/add">Add Book</a></p>
-      <p><a href="./books/search">Search Books</a></p>
-      <p><a href="./users/register">Register</a></p>
-      <p><a href="./users/login">Login</a></p>
-      <p><a href="./about">About</a></p>
-      <p><a href="./logout">Logout</a></p>
     </div>
   </body>
 </html>
