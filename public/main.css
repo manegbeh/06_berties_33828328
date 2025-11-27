@@ -62,7 +62,7 @@ input[type="password"] {
 .flex-row a {
     text-decoration: none;
     font-size: 13px;
-    color: #2563eb;
+    color: #32015d;
 }
 
 .flex-row a:hover {
@@ -73,7 +73,7 @@ input[type="password"] {
 button, .btn-primary {
     width: 100%;
     padding: 12px;
-    background-color: #2563eb;
+    background-color: #32015d;
     color: white;
     border: none;
     border-radius: 8px;
@@ -116,7 +116,7 @@ button:hover, .btn-primary:hover {
 
 .footer-text a {
     text-decoration: none;
-    color: #2563eb;
+    color: #32015d;
 }
 
 .footer-text a:hover {
@@ -220,7 +220,7 @@ button:hover, .btn-primary:hover {
 }
 
 .table th {
-  background: #2563eb;
+  background: #32015d;
   color: white;
   padding: 12px;
   text-align: left;
@@ -247,7 +247,7 @@ button:hover, .btn-primary:hover {
 .btn {
   display: inline-block;
   padding: 8px 14px;
-  background: #2563eb;
+  background: #32015d;
   color: white;
   text-decoration: none;
   border-radius: 6px;
@@ -256,11 +256,11 @@ button:hover, .btn-primary:hover {
 }
 
 .btn:hover {
-  background: #1e4fbd;
+  background: #4d028f;
 }
 
 .btn-danger {
-  background: #dc3545;
+  background: #ce0418;
 }
 
 .btn-danger:hover {
