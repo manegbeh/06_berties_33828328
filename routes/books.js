@@ -20,12 +20,12 @@ router.get('/list', redirectLogin, function (req, res, next) {
 })
 
 // search form
-router.get('/search', function (req, res) {
+router.get('/search', redirectLogin, function (req, res) {
   res.render("books/search")
 })
 
 // search results
-router.get('/search-results', function (req, res, next) {
+router.get('/search-results', redirectLogin, function (req, res, next) {
   const term = req.sanitize(req.query.keyword || "")
   const sql = "SELECT * FROM books WHERE name LIKE ?"
   db.query(sql, [`%${term}%`], (err, result) => {
