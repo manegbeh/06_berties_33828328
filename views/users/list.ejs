@@ -17,8 +17,12 @@
         <li><a href="./register">Register</a></li>
         <li><a href="../about">About</a></li>
       </ul>
-      <div>
-        <a href="./login" class="login-btn"></a>
+      <div class="nav-right">
+        <% if (user && user.username) { %>
+          <a href="/users/logout" class="login-btn">Logout</a>
+        <% } else { %>
+          <a href="/users/login" class="login-btn">Login</a>
+        <% } %>
       </div>
     </nav>
 
