@@ -70,7 +70,7 @@ This project was built as coursework for **Dynamic Web Applications**, demonstra
 
 ### Clone the repository  
 ```
-git clone <your-repo-url>
+git clone https://github.com/manegbeh/06_berties_33828328
 cd 06_berties_33828328
 ```
 
