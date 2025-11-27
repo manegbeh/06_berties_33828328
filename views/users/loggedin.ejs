@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome – Bertie's Books</title>
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="/" class="nav-logo"><%= shopData.shopName %></a>
+      </div>
+
+      <ul class="nav-center">
+        <li><a href="../books/list">All Books</a></li>
+        <li><a href="../books/add">Add Book</a></li>
+        <li><a href="../books/search">Search Books</a></li>
+        <li><a href="./register">Register</a></li>
+        <li><a href="../about">About</a></li>
+      </ul>
+      <div class="nav-right">
+        <% if (user && user.username) { %>
+          <a href="./logout" class="login-btn">Logout</a>
+        <% } else { %>
+          <a href="./login" class="login-btn">Login</a>
+        <% } %>
+      </div>
+    </nav>
+
+<div class="container book-list">
+  <h1>Login Successful!</h1>
+
+  <p>Welcome back, <strong><%= username %></strong>.</p>
+
+  <a href="/books/list" class="btn" style="margin-top: 20px;">Go to Book List</a>
+</div>
+
+</body>
+</html>

@@ -106,7 +106,10 @@ router.post('/loggedin', function (req, res, next) {
             db.query("INSERT INTO audit_log (action) VALUES (?)",
                 [`Failed login (unknown user): ${username}`]);
 
-            return res.send("Login failed: Username does not exist.");
+            return res.render("users/login_failed", { 
+                message: "Login failed: Username does not exist.",
+                username: username
+            });
         }
 
         const hashedPassword = result[0].hashedPassword;
@@ -122,13 +125,18 @@ router.post('/loggedin', function (req, res, next) {
                 db.query("INSERT INTO audit_log (action) VALUES (?)",
                     [`User logged in: ${username}`]);
 
-                return res.send(`Login successful! Welcome back, ${username}.`);
+                return res.render("users/loggedin", { 
+                    username: username
+                });
             } else {
 
                 db.query("INSERT INTO audit_log (action) VALUES (?)",
                     [`Failed login (wrong password): ${username}`]);
 
-                return res.send("Login failed: Incorrect password.");
+                return res.render("users/login_failed", { 
+                    message: "Login failed: Incorrect password.",
+                    username: username
+                });
             }
         });
     });
