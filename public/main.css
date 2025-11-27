@@ -125,7 +125,7 @@ button:hover, .btn-primary:hover {
 
 .navbar {
   width: 100%;
-  background: #1f1f1f;
+  background: #32015d;
   color: white;
   padding: 12px 20px;
   display: flex;
@@ -200,4 +200,69 @@ button:hover, .btn-primary:hover {
   margin: 140px auto 0 auto;
   text-align: center;
   max-width: 500px;
+}
+
+/* Book list container */
+.container.book-list {
+  max-width: 750px;
+  margin: 150px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* Table styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th {
+  background: #2563eb;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.table tr:hover {
+  background: #f3f4f6;
+}
+
+/* Action buttons layout */
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: #1e4fbd;
+}
+
+.btn-danger {
+  background: #dc3545;
+}
+
+.btn-danger:hover {
+  background: #b02a37;
 }
