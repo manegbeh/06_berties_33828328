@@ -1,12 +1,12 @@
 <!doctype html>
 <html>
 <head>
-    <title>Register – Bertie's Books</title>
+    <title>Register – <%= shopData.shopName %></title>
     <link rel="stylesheet" href="/main.css">
 </head>
 
 <body>       
-    <h1>Bertie’s Books</h1>  
+    <h1><%= shopData.shopName %></h1>  
     <nav class="navbar">
       <div class="nav-left">
         <a href="/" class="nav-logo"><%= shopData.shopName %></a>
@@ -17,6 +17,7 @@
         <li><a href="/books/add">Add Book</a></li>
         <li><a href="/books/search">Search Books</a></li>
         <li><a href="/users/register">Register</a></li>
+        <li><a href="/weather">Weather Forecast</a></li>
         <li><a href="/about">About</a></li>
       </ul>
 

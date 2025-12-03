@@ -29,8 +29,8 @@ router.post(
     '/registered',
     [
         check('email').isEmail().withMessage("Enter a valid email"),
-        check('username').isLength({ min: 5, max: 20 }).withMessage("Username must be 5–20 characters"),
-        check('password').isLength({ min: 8 }).withMessage("Password must be at least 8 characters")
+        check('username').isLength({ min: 4, max: 20 }).withMessage("Username must be 5–20 characters"),
+        check('password').isLength({ min: 6 }).withMessage("Password must be at least 8 characters")
     ],
     function (req, res, next) {
 

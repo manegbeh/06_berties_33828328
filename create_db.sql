@@ -5,7 +5,10 @@ USE berties_books;
 CREATE TABLE users (
   id INT AUTO_INCREMENT PRIMARY KEY,
   username VARCHAR(255) NOT NULL UNIQUE,
-  password VARCHAR(255) NOT NULL
+  first VARCHAR(50),
+  last VARCHAR(50),
+  email VARCHAR(255),
+  hashedPassword VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE books (

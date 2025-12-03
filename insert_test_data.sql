@@ -1,7 +1,7 @@
 USE berties_books;
 
-INSERT INTO users (username, password) VALUES
-('admin', '$2a$10$Y6GS4oQXU1wFv1Qz.1YzrOMQe1tPq6JQGQb5JMh03O5yRpvUndo1u'); 
+INSERT INTO users (username, first, last, email, hashedPassword) VALUES
+('admin', 'Admin', 'User', 'admin@example.com', '$2a$10$Y6GS4oQXU1wFv1Qz.1YzrOMQe1tPq6JQGQb5JMh03O5yRpvUndo1u'); 
 -- password is "password"
 
 INSERT INTO books (title, author, price) VALUES

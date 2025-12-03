@@ -11,7 +11,7 @@ const redirectLogin = (req, res, next) => {
 }
 
 // list all books
-router.get('/list', redirectLogin, function (req, res, next) {
+router.get('/list', function (req, res, next) {
   const sqlquery = "SELECT * FROM books"
   db.query(sqlquery, (err, result) => {
     if (err) return next(err)
@@ -20,7 +20,7 @@ router.get('/list', redirectLogin, function (req, res, next) {
 })
 
 // search form
-router.get('/search', redirectLogin, function (req, res) {
+router.get('/search', function (req, res) {
   res.render("books/search")
 })
 
